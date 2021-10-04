@@ -1,0 +1,12 @@
+#!/bin/bash
+if which obs &>/dev/null; then 
+	kdialog --title $"OpenMandriva" --msgbox $"OBS Studio is already installed."
+else 
+	enable-repo restricted
+	pkexec dnf install --assumeyes obs-studio
+	if which obs &>/dev/null; then
+		kdialog --title $"OpenMandriva" --msgbox $"Installation succeeded."
+	else
+		kdialog --title $"OpenMandriva" --msgbox $"Installation failed."
+	fi
+fi

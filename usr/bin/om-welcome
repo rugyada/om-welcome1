@@ -1,0 +1,3 @@
+#!/bin/sh
+cd /usr/share/om-welcome/
+exec /usr/bin/htmlscript -s 1020x600 -i /usr/share/icons/openmandriva.svg -t "OM Welcome" index.sh.htm

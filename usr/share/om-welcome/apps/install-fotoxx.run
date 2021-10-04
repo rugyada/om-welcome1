@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if which fotoxx; then 
+	kdialog --title $"OpenMandriva"  --msgbox  $" Fotoxx is already installed."
+else 
+	enable-repo unsupported
+	pkexec dnf install --assumeyes fotoxx
+	if which fotoxx; then
+		kdialog --title $"OpenMandriva"  --msgbox  $" Fotoxx successfully installed."
+	else
+		kdialog --title $"OpenMandriva"  --msgbox  $" Fotoxx not installed."
+	fi
+fi

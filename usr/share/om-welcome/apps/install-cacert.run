@@ -1,0 +1,2 @@
+#!/bin/bash
+xterm ./installapp/install-cacert.sh

@@ -1,0 +1,11 @@
+#!/bin/bash
+if which qtcreator; then 
+	kdialog --title $"OpenMandriva"  --msgbox  $" Qt-Creator is already installed."
+else 
+	pkexec dnf install --assumeyes qt-creator
+	if which qtcreator; then
+		kdialog --title $"OpenMandriva"  --msgbox  $" Qt-Creator successfully installed."
+	else
+		kdialog --title $"OpenMandriva"  --msgbox  $" Qt-Creator not installed."
+	fi
+fi

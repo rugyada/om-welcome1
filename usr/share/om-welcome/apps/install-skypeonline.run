@@ -1,0 +1,11 @@
+#!/bin/bash
+if rpm -q skype; then 
+	kdialog --title $"OpenMandriva"  --msgbox  $" Skype is already installed."
+else 
+	pkexec dnf install --assumeyes skype
+	if rpm -q skype; then
+		kdialog --title $"OpenMandriva"  --msgbox  $" Skype successfully installed."
+	else
+		kdialog --title $"OpenMandriva"  --msgbox  $"Skype not installed."
+	fi
+fi

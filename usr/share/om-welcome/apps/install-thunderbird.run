@@ -1,0 +1,11 @@
+#!/bin/bash
+if which thunderbird; then 
+	kdialog --title $"OpenMandriva"  --msgbox  $" Mozilla Thunderbird is already installed."
+else
+	pkexec dnf install --assumeyes thunderbird
+	if which thunderbird; then
+		kdialog --title $"OpenMandriva"  --msgbox  $" Mozilla Thunderbird successfully installed."
+	else
+		kdialog --title $"OpenMandriva"  --msgbox  $" Mozilla Thunderbird not installed."
+	fi
+fi

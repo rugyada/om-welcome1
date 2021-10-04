@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if which homebank; then 
+	kdialog --title $"OpenMandriva"  --msgbox  $" Homebank is already installed.";
+else 
+	pkexec dnf install --assumeyes homebank
+	if which homebank; then
+		kdialog --title $"OpenMandriva"  --msgbox  $" Homebank successfully installed.";
+	else
+		kdialog --title $"OpenMandriva"  --msgbox  $" Homebank not installed.";
+	fi
+fi

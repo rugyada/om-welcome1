@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if rpm -q inkscape; then 
+	kdialog --title $"OpenMandriva"  --msgbox  $" Inkscape is already installed."
+else 
+	pkexec dnf install --assumeyes inkscape
+	if rpm -q inkscape; then
+		kdialog --title $"OpenMandriva"  --msgbox  $" Inkscape successfully installed."
+	else
+		kdialog --title $"OpenMandriva"  --msgbox  $" Inkscape not installed."
+	fi
+fi

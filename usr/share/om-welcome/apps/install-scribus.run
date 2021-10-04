@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if rpm -q scribus; then 
+	kdialog --title $"OpenMandriva"  --msgbox  $" Scribus is already installed."
+else 
+	pkexec dnf install --assumeyes scribus
+	if rpm -q scribus; then
+		kdialog --title $"OpenMandriva"  --msgbox  $" Scribus successfully installed."
+	else
+		kdialog --title $"OpenMandriva"  --msgbox  $"Scribus not installed."
+	fi
+fi

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if rpm -qa |grep "^gimp"; then 
+	kdialog --title $"OpenMandriva"  --msgbox  $" Gimp is already installed."
+else 
+	pkexec dnf install --assumeyes gimp
+	if rpm -qa |grep "^gimp"; then
+		kdialog --title $"OpenMandriva"  --msgbox  $" Gimp successfully installed."
+	else
+		kdialog --title $"OpenMandriva"  --msgbox  $" Gimp not installed."
+	fi
+fi

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if rpm -q semantik &>/dev/null; then 
+	kdialog --title $"OpenMandriva"  --msgbox  $" Semantik is already installed."
+else 
+	enable-repo unsupported
+	pkexec dnf install --assumeyes semantik
+	if rpm -q semantik &>/dev/null; then
+		kdialog --title $"OpenMandriva"  --msgbox  $" Semantik successfully installed."
+	else
+		kdialog --title $"OpenMandriva"  --msgbox  $" Semantik not installed."
+	fi
+fi

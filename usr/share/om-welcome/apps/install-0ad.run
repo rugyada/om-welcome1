@@ -1,0 +1,11 @@
+#!/bin/bash
+if rpm -qa |grep "^0ad*"; then 
+	kdialog --title $"OpenMandriva"  --msgbox  $" 0ad is already installed.";
+else
+	pkexec dnf install --assumeyes 0ad
+	if rpm -qa |grep "^0ad*"; then 
+		kdialog --title $"OpenMandriva"  --msgbox  $" 0ad successfully installed.";
+	else
+		kdialog --title $"OpenMandriva"  --msgbox  $" 0ad not installed.";
+	fi
+fi

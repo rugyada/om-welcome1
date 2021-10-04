@@ -1,0 +1,11 @@
+#!/bin/bash
+if rpm -q wesnoth; then 
+	kdialog --title $"OpenMandriva"  --msgbox  $" wesnoth is already installed."
+else 
+	pkexec dnf install --assumeyes wesnoth
+	if rpm -q wesnoth; then
+		kdialog --title $"OpenMandriva"  --msgbox  $" wesnoth successfully installed."
+	else
+		kdialog --title $"OpenMandriva"  --msgbox  $" wesnoth not installed."
+	fi
+fi

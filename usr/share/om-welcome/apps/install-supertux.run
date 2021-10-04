@@ -1,0 +1,11 @@
+#!/bin/bash
+if rpm -q supertux &>/dev/null; then 
+	kdialog --title $"OpenMandriva"  --msgbox  $" Supertux is already installed."
+else 
+	pkexec dnf install --assumeyes supertux
+	if rpm -q supertux &>/dev/null; then
+		kdialog --title $"OpenMandriva"  --msgbox  $" Supertux successfully installed."
+	else
+		kdialog --title $"OpenMandriva"  --msgbox  $" Supertux not installed."
+	fi
+fi

@@ -1,0 +1,11 @@
+#!/bin/bash
+if rpm -q --whatprovides jdk-current; then
+	kdialog --title $"OpenMandriva"  --msgbox  $" OpenJDK is already installed."
+else 
+	pkexec dnf install --assumeyes jdk-current
+	if rpm -q --whatprovides jdk-current; then
+		kdialog --title $"OpenMandriva"  --msgbox  $" OpenJDK successfully installed."
+	else
+		kdialog --title $"OpenMandriva"  --msgbox  $" OpenJDK not installed."
+	fi
+fi

@@ -1,0 +1,11 @@
+#!/bin/bash
+if rpm -qa |grep "calibre*"; then 
+	kdialog --title $"OpenMandriva"  --msgbox  $" Calibre is already installed."
+else 
+	pkexec dnf install --assumeyes calibre
+	if rpm -q calibre; then
+		kdialog --title $"OpenMandriva"  --msgbox  $" Calibre successfully installed."
+	else
+		kdialog --title $"OpenMandriva"  --msgbox  $" Calibre not installed."
+	fi
+fi

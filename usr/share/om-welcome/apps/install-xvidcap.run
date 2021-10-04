@@ -1,0 +1,12 @@
+#!/bin/bash
+if rpm -qa |grep "xvidcap*"; then 
+	kdialog --title $"OpenMandriva"  --msgbox  $" Xvidcap is already installed."
+else 
+	enable-repo unsupported
+	pkexec dnf install --assumeyes xvidcap
+	if which xvidcap; then
+		kdialog --title $"OpenMandriva"  --msgbox  $" Xvidcap successfully installed."
+	else
+		kdialog --title $"OpenMandriva"  --msgbox  $" Xvidcap not installed."
+	fi
+fi

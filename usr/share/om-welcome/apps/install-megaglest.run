@@ -1,0 +1,12 @@
+#!/bin/bash
+if rpm -q megaglest &>/dev/null; then 
+	kdialog --title $"OpenMandriva"  --msgbox  $" megaglest is already installed."
+else 
+	enable-repo unsupported
+	pkexec dnf install --assumeyes megaglest
+	if rpm -q megaglest &>/dev/null; then
+		kdialog --title $"OpenMandriva"  --msgbox  $" megaglest successfully installed."
+	else
+		kdialog --title $"OpenMandriva"  --msgbox  $" megaglest not installed."
+	fi
+fi

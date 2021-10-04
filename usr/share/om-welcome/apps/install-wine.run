@@ -1,0 +1,11 @@
+#!/bin/bash
+if which wine; then 
+	kdialog --title $"OpenMandriva"  --msgbox  $" Wine is already installed."
+else 
+	pkexec dnf --refresh install --assumeyes wine cabextract
+	if which wine; then
+		kdialog --title $"OpenMandriva"  --msgbox  $" Wine successfully installed."
+	else
+		kdialog --title $"OpenMandriva"  --msgbox  $" Wine not installed."
+	fi
+fi

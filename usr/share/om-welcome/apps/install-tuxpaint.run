@@ -1,0 +1,11 @@
+#!/bin/bash
+if rpm -q tuxpaint; then 
+	kdialog --title $"OpenMandriva"  --msgbox  $" Tux Paint is already installed."
+else 
+	pkexec dnf install --assumeyes tuxpaint
+	if rpm -q tuxpaint; then
+		kdialog --title $"OpenMandriva"  --msgbox  $" Tux Paint successfully installed."
+	else
+		kdialog --title $"OpenMandriva"  --msgbox  $" Tux Paint not installed."
+	fi
+fi
