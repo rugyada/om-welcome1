@@ -1,5 +1,5 @@
 Name:		om-welcome
-Version:	2.3.0.7
+Version:	2.3.0.8
 Release:	1
 Summary:	OpenMandriva Lx Welcome Page
 License:	GPLv2
@@ -10,6 +10,7 @@ Requires:	kdialog
 Requires:	htmlscript >= 1.0.1
 BuildRequires:	make
 BuildArch:	noarch
+%rename oma-welcome
 
 %description
 Introduce new users to the OpenMandriva Lx.
