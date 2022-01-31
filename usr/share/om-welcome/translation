@@ -24,13 +24,15 @@ menuapps=$"Applications"
 menuappsoffice=$"Office"
 menuappsgraphics=$"Graphics"
 menuappsmultimedia=$"Multimedia"
+menuappsedu=$"Educational"
+menuappskids=$"Kids"
 menuappsutility=$"Utility"
 menuappsgaming=$"Games"
 menuappsdevelopment=$"Development"
 menuappsinternet=$"Internet"
-cabecalho01=$"Click on the menus below to configure your"
+cabecalho01=$"Click on the menus below to configure your OpenMandriva Lx"
 cabecalho02=$"- Update your system, configure network, printer, desktop theme, icons. Or go to OpenMandriva Control Center for more"
-cabecalho03=$"Install some extra applications to"
+cabecalho03=$"Install some extra applications to OpenMandriva Lx"
 cabecalho04=$" - To install click the application icon. Please wait until the process is done, it may take a while."
 titleeditmedia=$"Add Media"
 descaddmedia=$"After installing OpenMandriva Lx, you can configure repositories to install other applications and to keep the system updated"
@@ -52,7 +54,7 @@ titlechangethemes=$"Desktop Themes"
 descchangethemes=$"Change or install your favorite Plasma theme"
 
 #translations of apps-graphics.sh.htm
-titlegimg=$"Gimp"
+titlegimg=$"GIMP"
 descgimp=$"Create and edit your images in a professional way with this powerful Open Source tool"
 titleinkscape=$"Inkscape"
 descinkscape=$"A powerful, open source vector drawing tool, for illustrators and designers"
@@ -139,6 +141,17 @@ desclokalize=$"Lokalize is a computer-aided translation system that focuses on p
 titlehomebank=$"Homebank"
 deschomebank=$"Free easy personal accounting for all"
 
+#translations of apps-edu.sh.htm
+titlestellarium=$"Stellarium"
+descstellarium=$"Stellarium renders 3D photo-realistic skies in real time"
+titlekalzium=$"Kalzium"
+desckalzium=$"A periodic table of the elements"
+
+#translations of apps-kids.sh.htm
+titlescratch=$"Scratch"
+descscratch=$"A programming language for young people to create digital stories, games, and animations"
+titlegcompris=$"GCompris"
+descgcompris=$"Educational software suite for children aged 2 to 10"
 
 #translation of community.sh.htm
 titlecommunity=$"How to contribute to OpenMandriva"
@@ -201,8 +214,6 @@ titlesupertux=$"SuperTux"
 descsupertux=$"SuperTux is a classic 2D jump'n run sidescroller game in a similar style like the original SuperMario games"
 titlewarzone=$"Warzone 2100"
 descwarzone=$"Postnuclear War realtime strategy games"
-titlegcompris=$"GCompris"
-descgcompris=$"Educational software suite for children aged 2 to 10"
 titlefilezilla=$"Filezilla"
 descfilezilla=$"FileZilla is a powerful, free file management tool for FTP access to your Web site's server"
 titlevirtualbox=$"Virtualbox"
@@ -212,7 +223,7 @@ descgrsync=$"Grsync is a GUI for rsync. While it can work with remote hosts, its
 
 #News.sh.htm
 newfeature=$"New Features and Major Changes"
-releasepreambule=$"<span>$(lsb_release -d | cut -d":" -f2)</span>, codename <span class="bold">$(lsb_release -c | cut -d":" -f2)</span>, is published by OpenMandriva Association. Over the course of the year past we have tried to evolve the way you use your desktop. Here are some of the things we have done for <span>$(lsb_release -d | cut -d":" -f2)</span>:"
+releasepreambule=$"OpenMandriva Lx is published by OpenMandriva Association. Over the course of the year past we have tried to evolve the way you use your desktop. Here are some of the things we have done for this release:"
 omccnew=$"OM Control Center"
 controlcenter=$"Drakconf"
 freshpackages=$"Fresh Packages"
